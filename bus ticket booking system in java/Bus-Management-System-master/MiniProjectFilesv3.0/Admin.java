@@ -22,7 +22,7 @@ public class Admin implements ActionListener
 	Font fs=new Font("Trebuchet MS",Font.BOLD,13);
 	Container c=fr.getContentPane();
 	
-		public Admin()
+	public Admin()
 	{
 		
 		fr.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -77,8 +77,8 @@ public class Admin implements ActionListener
 		fr.setVisible(true);
 	}
 	
-		public void actionPerformed(ActionEvent evt)
-		{
+	public void actionPerformed(ActionEvent evt)
+	{
 		try
 		{  
 				if(evt.getSource()==btn) {
@@ -115,6 +115,7 @@ public class Admin implements ActionListener
 
 					if (found) {
 						System.out.println("Admin credentials matched.");
+						fr.dispose();
 						Admin1 obj = new Admin1();
 						obj.adm();
 						// Proceed with your logic for matched admin credentials
