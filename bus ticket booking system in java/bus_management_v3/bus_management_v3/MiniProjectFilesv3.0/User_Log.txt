@@ -1,0 +1,5 @@
+First Name, Last Name, Mobile Number, Username, password
+joynal,abedin,01787887,joy,joy
+NNN,lll,0101010,kill,him
+brad,peet,2234234,pet,pet
+hello,hi,234234,hello,hi
