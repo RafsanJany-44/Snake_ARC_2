@@ -75,7 +75,7 @@ public class RemoveRowsWindow extends JFrame {
             writer.close();
             reader.close();
 
-            // Replace the original file with the temporary file
+            
             Files.copy(tempFile.toPath(), inputFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
 
             // Delete the temporary file

@@ -95,8 +95,8 @@ public class User implements ActionListener {
                     if (checkCredentials(username, password)) {
                         JOptionPane.showMessageDialog(null, "Login Successful!");
                         fr.dispose();
-                        //UserPortal portal = new UserPortal();
-                        //portal.showPortal();
+                        UserPortal portal = new UserPortal();
+                        portal.up();
                         System.out.println("User Log in Succ!!!");
                     } else {
                         JOptionPane.showMessageDialog(null, "Incorrect Username or Password!");

@@ -58,6 +58,35 @@ public class Table extends JFrame {
 
     // Read data from the file and return as a DefaultTableModel
     private DefaultTableModel readDataFromFile(String filename) {
+
+
+
+                // Variable to hold the first element of the last row
+                String firstElementOfLastRow = null;
+        
+                try (BufferedReader reader = new BufferedReader(new FileReader(filename))) {
+                    String line;
+                    // Read the file line by line
+                    while ((line = reader.readLine()) != null) {
+                        // Split each line into parts using the comma as the delimiter
+                        String[] data = line.split(",");
+                        // Update the first element of the last row on each read
+                        if (data.length > 0) {
+                            firstElementOfLastRow = data[0];
+                        }
+                    }
+                } catch (IOException e) {
+                    // Handle possible IOExceptions
+                    e.printStackTrace();
+                }
+        
+                // Print the first element of the last row, if it exists
+                if (firstElementOfLastRow != null) {
+                    System.out.println("First element of the last row: " + firstElementOfLastRow);
+                } else {
+                    System.out.println("The file is empty or no valid entries were found.");
+                }
+
         DefaultTableModel model = new DefaultTableModel();
         try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
             // Read the header

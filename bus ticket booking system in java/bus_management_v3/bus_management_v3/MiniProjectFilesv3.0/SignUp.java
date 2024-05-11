@@ -169,13 +169,18 @@ public class SignUp implements ActionListener {
                 s4 = txt4.getText();
                 s5 = new String(pass.getPassword());
 
-                try (FileWriter fw = new FileWriter("User_Log.txt", true);
-                     BufferedWriter bw = new BufferedWriter(fw);
-                     PrintWriter pw = new PrintWriter(bw)) {
-                    pw.println(s1 + "," + s2 + "," + s3 + "," + s4 + "," + s5);
-                    JOptionPane.showMessageDialog(fr, "User signed up successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
-                } catch (IOException e) {
-                    e.printStackTrace();
+                // Check if any of the fields are empty
+                if (s1.isEmpty() || s2.isEmpty() || s3.isEmpty() || s4.isEmpty() || s5.isEmpty()) {
+                    JOptionPane.showMessageDialog(fr, "Please fill in all the fields.", "Warning", JOptionPane.WARNING_MESSAGE);
+                } else {
+                    try (FileWriter fw = new FileWriter("User_Log.txt", true);
+                        BufferedWriter bw = new BufferedWriter(fw);
+                        PrintWriter pw = new PrintWriter(bw)) {
+                        pw.println(s1 + "," + s2 + "," + s3 + "," + s4 + "," + s5);
+                        JOptionPane.showMessageDialog(fr, "User signed up successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
 
