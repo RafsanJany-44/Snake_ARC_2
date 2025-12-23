@@ -1,0 +1,32 @@
+[
+  {
+    "qid": "q001",
+    "query": "বাংলাদেশ ক্রিকেট",
+    "source_lang": "bn"
+  },
+  {
+    "qid": "q002",
+    "query": "দাম বেড়েছে চাল",
+    "source_lang": "bn"
+  },
+  {
+    "qid": "q003",
+    "query": "Rohingya crisis",
+    "source_lang": "en"
+  },
+  {
+    "qid": "q004",
+    "query": "Bangladesh economy",
+    "source_lang": "en"
+  },
+  {
+    "qid": "q005",
+    "query": "চট্টগ্রাম বিশ্ববিদ্যালয়",
+    "source_lang": "bn"
+  },
+  {
+    "qid": "q006",
+    "query": "climate change Bangladesh",
+    "source_lang": "en"
+  }
+]
